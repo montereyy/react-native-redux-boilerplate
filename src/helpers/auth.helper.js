@@ -15,8 +15,8 @@ class AuthHelper {
 		NavigationHelper.transition('login');
 	}
 
-	static isAuthenticated() {
-		return !!AuthHelper.getToken();
+	static async isAuthenticated() {
+		return !!(await AuthHelper.getToken());
 	}
 
 	static getToken() {

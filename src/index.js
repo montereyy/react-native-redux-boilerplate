@@ -8,9 +8,11 @@ import {Provider} from 'react-redux';
 import Router from './helpers/router.helper';
 import Styles from './index.styles';
 
-// Initializing auth (getting user and checking token on app load)
 import AuthHelper from './helpers/auth.helper';
+import HttpHelper from './helpers/http.helper';
 
+/////Different initialization
+HttpHelper.decorateAxios();
 AuthHelper.initAuth();
 
 const NavigatorContext = new NavigationContext({
